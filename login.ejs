@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Login and Singup Form</title>
+
+    <link rel="stylesheet" href="./stylesheets/style.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<body>
+    <section class="container forms">
+        <img src="./images/louis-hansel-u13IpYtZ9I8-unsplash.jpg" alt="image">
+        <div class="form login">
+            <header>Login</header>
+
+            <form action="/login" method="post">
+                <div class="field input-filed">
+                    <input type="email" placeholder="Email" class="input" name="email">
+                </div>
+
+                <div class="field input-filed">
+                    <input type="password" placeholder="Password" id="passwordInput" class="password" name="password">
+                    <i class='bx bx-hide eye-icon' onclick="togglePasswordVisibility()"></i>
+                </div>
+
+                <div class="form-link">
+                    <a href="#" class="forgot-pass">Forgot password ?</a>
+                </div>
+
+                <div class="field button-filed">
+                    <button>Login</button>
+                </div>
+
+                <span class="form-link">
+                    <!-- <span>Already have an account ?<a href="#" class="Singup-link">Singup</a></span> -->
+                  <span>Already have an account ?  <a href="/signup">Singup</a></span>
+                </div>
+            </form>
+        </div>
+
+
+<!-- signup form
+        <div class="form signup">
+            <header>Signup</header>
+
+            <form action="#">
+                <div class="field input-filed">
+                    <input type="email" placeholder="Email" class="input">
+                </div>
+
+                <div class="field input-filed">
+                    <input type="password" placeholder="Password" class="password">
+                    
+                </div>
+
+                <div class="field input-filed">
+                    <input type="password" placeholder="Password" class="password">
+                    <i class='bx bx-hide eye-icon'></i>
+                </div>
+
+
+
+                <div class="field button-filed">
+                    <button>Signup</button>
+                </div>
+
+                <div class="form-link">
+                    <span>Already have an account ?<a href="#" class="login-link">Login</a></span>
+                </div>
+            </form>
+        </div> -->
+    </section>
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById("passwordInput");
+            const eyeIcon = document.querySelector('.eye-icon');
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.classList.remove('bx-hide');
+                eyeIcon.classList.add('bx-show');
+            } else {
+                passwordInput.type = "password";
+                eyeIcon.classList.remove('bx-show');
+                eyeIcon.classList.add('bx-hide');
+              
+            }
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
